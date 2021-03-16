@@ -4,13 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "yarn && parcel build src/content.js src/background.js --no-content-hash --no-source-maps && rm -rf node_modules"
+    "start": "parcel popup.html",
+    "build": "yarn && rm -rf dist && parcel build src/popup.js src/content.js src/background.js --no-content-hash --no-source-maps && rm -rf node_modules"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
     "prettier": "^2.2.1"
   },
   "dependencies": {
-    "copy-to-clipboard": "^3.3.1"
+    "copy-to-clipboard": "^3.3.1",
+    "spectre.css": "^0.5.9"
   }
 }

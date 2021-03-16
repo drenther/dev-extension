@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="spectre.css" />
+    <title>Dev Extension</title>
+  </head>
+  <body>
+    <div class="container" style="margin: 10px 0; max-width: 400px">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">Auth Token</div>
+        </div>
+        <div class="panel-body">
+          <code data-id="token"></code>
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-block" data-id="token">Copy Auth Token</button>
+        </div>
+      </div>
+
+      <div class="panel" style="margin: 10px 0">
+        <div class="panel-header">
+          <div class="panel-title">Tenant ID</div>
+        </div>
+        <div class="panel-body">
+          <code data-id="tenant"></code>
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-block" data-id="tenant">Copy Tenant ID</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./dist/popup.js"></script>
+  </body>
+</html>

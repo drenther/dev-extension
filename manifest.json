@@ -1,11 +1,20 @@
 {
   "manifest_version": 2,
-  "name": "Auth Token Grabber",
+  "name": "Dev Extension",
   "version": "0.0",
   "offline_enabled": true,
 
+  "permissions": ["clipboardWrite", "activeTab", "tabs"],
+
+  "browser_action": {
+    "default_title": "Dev Extension",
+    "default_popup": "popup.html"
+  },
+
+  "web_accessible_resources": ["spectre.css"],
+
   "background": {
-    "persistent": false,
+    "persistent": true,
     "scripts": ["dist/background.js"]
   },
 
