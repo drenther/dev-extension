@@ -69,20 +69,24 @@ function scrapeAuthToken() {
       const response = injectedElement.innerText.trim();
 
       let newToken;
+      let event;
       if (response) {
         const json = JSON.parse(response) || {};
 
         newToken = json.id_token;
+        event = 'login';
 
         injectedElement.innerText = '';
       } else {
         newToken = localStorage.getItem('integrtrToken');
+        event = 'localStorage';
       }
 
       if (newToken && newToken !== token) {
         chrome.runtime.sendMessage({
           type: 'token',
           token: newToken,
+          event,
         });
 
         token = newToken;

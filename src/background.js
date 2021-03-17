@@ -8,7 +8,7 @@ const state = {
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   if (message) {
     if (message.type === 'token') {
-      if (!state.token) {
+      if (message.event === 'login') {
         // only auto copy the first time
         copy(message.token);
       }
