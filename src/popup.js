@@ -19,7 +19,6 @@ function sync() {
   chrome.runtime.sendMessage(
     { type: 'syncState' },
     function synchronize(newState) {
-      console.log({ state, newState });
       if (state.token !== newState.token) {
         update('token', newState.token);
       }
